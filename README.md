@@ -1,40 +1,38 @@
 # TPDB
 Trabajo práctico de programación 3 | Creación de bases de datos relacionales y conexión entre tablas usando Spring Boot
 
-
 *Tabla rubro*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/0279f3c2-054d-4746-8ea5-f4d5aa3752c6)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/6afb3e33-4ec2-4e43-baa2-7a51b46242c8)
 
 *Tabla producto*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/6a7e6734-3d9d-4eab-97e0-4c68fbe1ec91)
-
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/5cfd304f-2e3f-4573-b664-55bc24e51da4)
 
 *Tabla pedido*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/d37421d8-1da1-408f-962e-20a8c0ae4dfe)
-
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/47e86473-4699-49b6-8824-ca07e1d697d9)
 
 *Tabla usuario*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/2e34207c-868c-4ee4-a22c-f0eac8457231)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/7193e770-ff8f-4ce3-914d-bb0d0c691eb8)
 
 *Tabla DetallePedido*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/febbd0ef-c9cd-4363-8681-63ca411db481)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/b8c865fb-2364-456e-89ad-ea057a04e5ae)
 
 *Tabla cliente*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/37144ab2-94e5-4f28-8fe7-6a0df714d22f)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/7d979f44-1de7-498d-9a17-9b1bae295d10)
 
 *Tabla domicilio*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/5e398427-1a6e-4dae-99fe-2f042d258418)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/0b589223-839b-45bb-b990-589ca2c50403)
 
 *Tabla factura*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/155ad6fd-5ede-4fb6-9318-7b0c892daa48)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/e3f92b93-d8b5-4f11-b9f5-0644a371bf10)
+
 
 
 
