@@ -27,7 +27,4 @@ public class Producto extends ClaseBase{
     private String foto;
     private String receta;
 
-    @ManyToOne
-    @JoinColumn(name = "rubroId")
-    private Rubro rubro;
 }

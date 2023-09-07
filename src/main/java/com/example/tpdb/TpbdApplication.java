@@ -14,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @SpringBootApplication
@@ -52,88 +53,85 @@ public class TpbdApplication {
         return args -> {
 
             //Patrón de diseño builder
+
+           Factura factura = Factura.builder()
+                   .total(800)
+                   .numero(444567)
+                   .fecha("7/9/2023")
+                   .formaPago(FormaPago.EFECTIVO)
+                   .build();
+           facturaRepositorio.save(factura);
+
+           Producto producto = Producto.builder()
+                   .denominacion("Hamburguesa")
+                   .precioVenta(500.5)
+                   .precioCompra(200.0)
+                   .foto("IMAGEN")
+                   .receta("Carne | Pan | Lechuga")
+                   .stockActual(14)
+                   .stockMinimo(1)
+                   .tiempoEstimadoCocina(15)
+                   .tipo(Tipo.MANUFACTURADO)
+                   .unidadMedida("kg")
+                   .build();
+           productoRepositorio.save(producto);
+
+            DetallePedido detallePedido = DetallePedido.builder()
+                    .producto(producto)
+                    .cantidad(1)
+                    .subtotal(500.0)
+                    .producto(producto)
+                    .build();
+            detallePedidoRepositorio.save(detallePedido);
+
             Rubro rubro = Rubro.builder()
                     .denominacion("Comida")
+                    .productos(new ArrayList<>())
                     .build();
+            rubro.getProductos().add(producto);
             rubroRepositorio.save(rubro);
+
+            Pedido pedido = Pedido.builder()
+                    .Fecha("7/9/23")
+                    .estado(Estado.PREPARACION)
+                    .total(1.0)
+                    .tipoEnvio(TipoEnvio.DELIVERY)
+                    .horaEstimadaEntrega("2")
+                    .factura(factura)
+                    .detallePedido(new ArrayList<>())
+                    .build();
+            pedido.getDetallePedido().add(detallePedido);
+            pedidoRepositorio.save(pedido);
 
             Usuario usuario = Usuario.builder()
                     .rol("Rol")
                     .password("******")
                     .nombre("Bruno")
+                    .pedidos(new ArrayList<>())
                     .build();
+            usuario.getPedidos().add(pedido);
             usuarioRepositorio.save(usuario);
-
-            //Añadimos el objeto rubro a producto
-            Producto producto = Producto.builder()
-                    .denominacion("Hamburguesa")
-                    .precioVenta(500.5)
-                    .precioCompra(200.0)
-                    .foto("IMAGEN")
-                    .rubro(rubro)
-                    .receta("Carne | Pan | Lechuga")
-                    .stockActual(14)
-                    .stockMinimo(1)
-                    .tiempoEstimadoCocina(15)
-                    .tipo(Tipo.MANUFACTURADO)
-                    .unidadMedida("kg")
-                    .build();
-            productoRepositorio.save(producto);
-
-            Domicilio domicilio = Domicilio.builder()
-                    .calle("Calle")
-                    //.clientes(new ArrayList<Cliente>())
-                    .localidad("Mendoza")
-                    .numero("1234")
-                    .pedidos(new ArrayList<Pedido>())
-                    .build();
-            domicilioRepositorio.save(domicilio);
 
             Cliente cliente = Cliente.builder()
                     .apellido("Mastropietro")
                     .nombre("Bruno")
                     .email("brunomastro165")
                     .telefono("2613998137")
-                    .domicilios(new ArrayList<Domicilio>())
+                    .pedidos(new ArrayList<>())
                     .build();
-            cliente.getDomicilios().add(domicilio);
+            cliente.getPedidos().add(pedido);
             clienteRepositorio.save(cliente);
 
-            Pedido pedido = Pedido.builder()
-                    .Fecha("5/9/23")
-                    .estado(Estado.PREPARACION)
-                    .total(1.0)
-                    .tipoEnvio(TipoEnvio.DELIVERY)
-                    .horaEstimadaEntrega("2")
+            //Añadimos el objeto rubro a producto
+            Domicilio domicilio = Domicilio.builder()
+                    .calle("Calle")
+                    .localidad("Mendoza")
+                    .numero("1234")
+                    .pedidos(new ArrayList<>())
                     .cliente(cliente)
-                    .domicilio(domicilio)
-                    .usuario(usuario)
                     .build();
             domicilio.getPedidos().add(pedido);
             domicilioRepositorio.save(domicilio);
-            pedidoRepositorio.save(pedido);
-
-            DetallePedido detallePedido = DetallePedido.builder()
-                    .producto(producto)
-                    .cantidad(1)
-                    .subtotal(500.0)
-                    .pedido(pedido)
-                    .build();
-            detallePedidoRepositorio.save(detallePedido);
-
-
-            Factura factura = Factura.builder()
-                    .descuento(100)
-                    .fecha("5/9/23")
-                    .formaPago(FormaPago.EFECTIVO)
-                    .numero(1)
-                    .pedido(pedido)
-                    .total(400)
-                    .build();
-            facturaRepositorio.save(factura);
-
-
-
 
             System.out.println("Escenario de creación de datos de prueba completado.");
         };

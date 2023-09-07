@@ -22,23 +22,12 @@ public class Pedido extends ClaseBase {
     private TipoEnvio tipoEnvio;
     private Double total;
 
-    //Dependiendo el tipo de relación, cambia dónde se genera la FK
+    @OneToOne
+    @JoinColumn(name="facturaId")
+    private Factura factura;
 
-   @ManyToOne
-   @JoinColumn(name = "usuarioId")
-   private Usuario usuario;
+    @OneToMany
+    @JoinColumn(name = "pedidoId")
+    private List<DetallePedido>detallePedido = new ArrayList<>();
 
-   @ManyToOne
-   @JoinColumn(name = "domicilioId")
-   private Domicilio domicilio;
-
-   @ManyToOne
-   @JoinColumn(name = "clienteId")
-   private Cliente cliente;
-
-    public void mostrarPedido(){
-
-
-
-    }
 }

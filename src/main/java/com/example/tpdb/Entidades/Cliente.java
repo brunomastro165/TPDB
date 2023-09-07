@@ -21,7 +21,7 @@ public class Cliente extends ClaseBase{
     private String email;
 
     @OneToMany
-    @JoinColumn(name = "usuarioId")
-    private List<Domicilio>domicilios=new ArrayList<>();
+    @JoinColumn(name = "clienteId")
+    private List<Pedido>pedidos=new ArrayList<>();
 
 }

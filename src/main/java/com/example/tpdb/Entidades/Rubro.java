@@ -20,7 +20,7 @@ import java.util.List;
 public class Rubro extends ClaseBase{
     private String denominacion;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany
     @JoinColumn(name = "rubroId")
-    private List<Producto> productos=new ArrayList<>();
+    private List<Producto>productos = new ArrayList<>();
 }

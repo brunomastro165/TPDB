@@ -17,4 +17,8 @@ public class Usuario extends ClaseBase {
     private String nombre;
     private String password;
     private String rol;
+
+    @OneToMany
+    @JoinColumn(name = "usuarioId")
+    private List<Pedido>pedidos = new ArrayList<>();
 }

@@ -21,8 +21,4 @@ public class Factura extends ClaseBase{
     private FormaPago formaPago;
     private int total;
 
-    @OneToOne
-    @JoinColumn(name = "pedidoId")
-    private Pedido pedido;
-
 }

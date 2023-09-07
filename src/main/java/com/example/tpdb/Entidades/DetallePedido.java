@@ -18,11 +18,7 @@ public class DetallePedido extends ClaseBase{
     private int cantidad;
     private Double subtotal;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "productoId")
     private Producto producto;
-
-    @ManyToOne
-    @JoinColumn(name = "pedidoId")
-    private Pedido pedido;
 }

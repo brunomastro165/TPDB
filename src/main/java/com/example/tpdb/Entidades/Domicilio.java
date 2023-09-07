@@ -1,9 +1,6 @@
 package com.example.tpdb.Entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,10 +21,9 @@ public class Domicilio extends ClaseBase{
 
     @OneToMany
     @JoinColumn(name = "domicilioId")
-    private List<Pedido> pedidos=new ArrayList<>();
+    private List<Pedido>pedidos = new ArrayList<>();
 
-    @OneToMany
-    @JoinColumn(name = "domicilioId")
-    private List<Cliente> clientes = new ArrayList<>();
-
+    @ManyToOne
+    @JoinColumn(name = "clienteId")
+    private Cliente cliente;
 }
