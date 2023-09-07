@@ -8,11 +8,13 @@ Trabajo práctico de programación 3 | Creación de bases de datos relacionales 
 
 *Tabla producto*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/917866a6-d0ff-40d5-afc4-90ee73cde446)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/6a7e6734-3d9d-4eab-97e0-4c68fbe1ec91)
+
 
 *Tabla pedido*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/bcded1b5-7024-4371-a91f-034a9f805fba)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/d37421d8-1da1-408f-962e-20a8c0ae4dfe)
+
 
 *Tabla usuario*
 
@@ -32,7 +34,8 @@ Trabajo práctico de programación 3 | Creación de bases de datos relacionales 
 
 *Tabla factura*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/9eab5f33-0624-4bc0-897d-843a8c4e3d17)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/155ad6fd-5ede-4fb6-9318-7b0c892daa48)
+
 
 
 
