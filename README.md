@@ -11,7 +11,7 @@ Trabajo práctico de programación 3 | Creación de bases de datos relacionales 
 
 *Tabla pedido*
 
-![image](https://github.com/brunomastro165/TPDB/assets/127962081/a2047775-d4cf-48a2-8241-3699e0403cd8)
+![image](https://github.com/brunomastro165/TPDB/assets/127962081/042294c2-1f8d-4d91-91d7-4bd784c8829d)
 
 *Tabla usuario*
 
